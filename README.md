@@ -37,7 +37,7 @@ I located the FinBert package, which trains the Bert algorithm on Financial data
 I used Gensim and Spacy create a custom pipeline for cleaning the financial data. 
 My interest was in persisting terms and groups of words, which also removing stop words. 
 
-![Pipeline]()
+![Pipeline](https://github.com/mpolyakova/earnings-nlp-metis/blob/master/pipeline.png)
 
 I start with a spacy pipeline in order to persist the parts of speech from the original sentence as I clean.  
 I start with combining noun chunks (nouns and their descriptors), and Named entities into single token. This is to persist combinations such as "supply chain" and "inflationary pressures", as I filter for noun. 
