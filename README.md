@@ -56,7 +56,7 @@ At this point, the list contains a large number of business terms and terms rela
 
 
 #### Topic Selection 
-I ran the algorith using both LSA and LDA for multiple number of topics, and both the count based vectorizer and the tdfif vectorizers. Consistenly, I saw more reasonable groups of words in the LDA, so I focused on optimising there.  Additionally, the frequency rather than raw count based input provided consistently higher coherence scores. 
+I ran the algorith using both LSA and LDA for multiple number of topics, and both the count based vectorizer and the tfidf vectorizers. Consistenly, I saw more reasonable groups of words in the LDA, so I focused on optimising there.  Additionally, the frequency rather than raw count based input provided consistently higher coherence scores. 
 
 I used various filtered corpuses(approx 10 different filterings), and ran LDA using various numbers of topics(range 5-40 topics), monitoring the outputted coherence scores, and topic print outs. I searched for higher coherence. For the more promising combinations, I ran the model and used PyLDavis to inspect the topics and word prevalences in each topic.  
 
