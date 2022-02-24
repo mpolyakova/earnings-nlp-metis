@@ -8,10 +8,15 @@ Earnings calls are also boring. Since this is a presentation to the company inve
 
 The topics discussed across these transcripts shed light on potential concerns and market factors, such as inflation. But for the amateur, such as myself, a simplification is needed. 
 
-I sought to build a tool which analyzes topics discussed across the industry, shedding light on global topics potentially concerning the markets, rather than details of the individual company quarter. Topics such as the pandemic, war, privacy law changes, and the sentiment across companies with regards to each. 
-
 
 ## Design 
+
+I sought to build a tool which analyzes topics discussed across the industry, shedding light on global topics potentially concerning the markets, rather than details of the individual company quarter. Topics such as the pandemic, war, privacy law changes, and the sentiment across companies with regards to each. 
+
+There are two pieces to this: locating topics which are mentioned in earnings calls, but do not refer to the workings of the company itself, or financial presentations - rather we're looking for outside factors metioned. This requires careful filtering to remove the obfuscating words, and topic modeling on the remaining terms. 
+
+The second is sentiment. Using the original sentence, as well as sentiment models trained on financial discussions, I intend to identify sentiment per sentence. Combining sentiments per sentence and topics per sentence, I was looking to calculate sentiment per topic. 
+
 
 ## Data 
 To create my corpus, I scraped the Montley Fool transcripts of 1000 earnings calls over the last 2 quarters(Dec 2021, Sep 2021), and used the prepared statements. Additionally, I researched using the Q&A section, which contains both analyst questions, and company responses, rather than the prepared section; however, I found this data significantly harder to parse, due to the unplanned form of the responses, which resulted in fewer complete sentences, and harder to understand(and parse) phrasings. 
